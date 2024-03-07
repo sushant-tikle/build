@@ -1,0 +1,104 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - tatvam_rating_by_day
+  - tatvam_rating_special_day
+  - tatvam_rating_by_week
+  - tatvam_rating_by_month
+  - tatvam_rating_by_year
+  - review_criteria_month_year
+  - review_criteria_quarter
+  - tatvam_rating_compare_by_months
+  - tatvam_rating_compare_by_years
+  - tatvam_rating_compare_by_quarters
+  - getting_top_best_and_worst_topics
+  - getting_only_worst_topics
+  - fallback
+  - compare_our_brand_with_competitors
+  - compare_our_brand_with_competitors_with_criteria
+  - overall_sentiment_of_our_brand
+  - areas_of_competitor_outperformance
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a DollyChat, Turning your online reviews into a symphony of insights for Dollywood – where sass meets analytics, and your opinions become the star attraction in the management's blockbuster decision-making show!"
+  
+  utter_tatvam_rating_by_day:
+  - text: "This is tatvam rating by days"
+
+  utter_tatvam_rating_special_day:
+    - text: "This is tatvam rating by holidays"
+  
+  utter_tatvam_rating_by_week:
+  - text: "This is tatvam rating by weeks"
+  
+  utter_review_criteria_month_year:
+  - text: "This is tatvam rating by review criteria for specific month year"
+
+  utter_review_criteria_quarter:
+    - text: "This is tatvam rating by review criteria for specific "
+  
+  utter_tatvam_rating_by_month:
+  - text: "This is tatvam rating by specific month"
+
+  utter_tatvam_rating_by_year:
+  - text: "This is tatvam rating by specific year"
+
+  utter_tatvam_rating_compare_by_months:
+  - text: "This is tatvam rating comparison between months"
+  
+  utter_tatvam_rating_compare_by_years:
+  - text: "This is tatvam rating comparison between years"
+
+  utter_tatvam_rating_compare_by_quarters:
+  - text: "This is tatvam rating comparison between quarters"
+
+  utter_getting_top_best_and_worst_topics:
+  - text: "This is best and worst topics for a year"
+
+  utter_getting_only_worst_topic:
+    - text: "This is  worst topics for a year"
+
+  utter_compare_our_brand_with_competitors:
+    - text: "This is for comparing the brand reputation with competitors"
+
+  utter_compare_our_brand_with_competitors_with_criteria:
+    - text: "This is for comparing the brand reputation with competitors considering review criteria"
+
+  utter_overall_sentiment_of_our_brand:
+    - text: "This is for calculating the overall sentiment of the brand"
+
+  utter_areas_of_competitor_outperformance:
+    - text: "This is for area of comeptitors outperformance "
+
+  utter_default:
+  - text: "I'm sorry, I didn't understand that. Can you please rephrase or ask something else?"
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
