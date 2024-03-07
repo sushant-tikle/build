@@ -1,0 +1,116 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy 
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: tatvam rating by day
+  steps:
+  - intent: tatvam_rating_by_day
+  - action: utter_tatvam_rating_by_day
+
+- story: tatvam rating by special day
+  steps:
+  - intent: tatvam_rating_special_day
+  - action: utter_tatvam_rating_special_day
+  
+- story: tatvam rating by week
+  steps:
+  - intent: tatvam_rating_by_week
+  - action: utter_tatvam_rating_by_week
+  
+   
+- story: tatvam rating by review criteria by month year
+  steps:
+  - intent: review_criteria_month_year
+  - action: utter_review_criteria_month_year
+
+- story: tatvam rating by review criteria by quarter
+  steps:
+  - intent: review_criteria_quarter
+  - action: utter_review_criteria_quarter
+  
+- story: tatvam rating by specific month
+  steps:
+  - intent: tatvam_rating_by_month
+  - action: utter_tatvam_rating_by_month
+
+- story: tatvam rating by specific year
+  steps:
+  - intent: tatvam_rating_by_year
+  - action: utter_tatvam_rating_by_year
+
+- story: tatvam rating comparison between months
+  steps:
+  - intent: tatvam_rating_compare_by_months
+  - action: utter_tatvam_rating_compare_by_months
+  
+- story: tatvam rating comparison between years
+  steps:
+  - intent: tatvam_rating_compare_by_years
+  - action: utter_tatvam_rating_compare_by_years
+ 
+- story: tatvam rating comparison between quarters
+  steps:
+  - intent: tatvam_rating_compare_by_quarters
+  - action: utter_tatvam_rating_compare_by_quarters
+
+- story: getting top best and worst topics
+  steps:
+  - intent: getting_top_best_and_worst_topics
+  - action: utter_getting_top_best_and_worst_topics
+
+- story: getting worst topics
+  steps:
+  - intent: getting_only_worst_topics
+  - action: utter_getting_only_worst_topics
+
+- story: compare the brand with competitors
+  steps:
+  - intent: compare_our_brand_with_competitors
+  - action: utter_compare_our_brand_with_competitors
+
+- story: compare the brand with competitors review criteria
+  steps:
+  - intent: compare_our_brand_with_competitors_with_criteria
+  - action: utter_compare_our_brand_with_competitors_with_criteria
+
+- story: Overall sentiment of our brand
+  steps:
+  - intent: overall_sentiment_of_our_brand
+  - action: utter_overall_sentiment_of_our_brand
+
+- story: areas of competitors outperformance
+  steps:
+  - intent: areas_of_competitor_outperformance
+  - action: utter_areas_of_competitor_outperformance
+
+- story: fallback path
+  steps:
+  - intent: fallback
+  - action: utter_default

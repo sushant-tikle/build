@@ -1,0 +1,382 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: tatvam_rating_by_day
+  examples: |
+    - What is the [Tatvam rating](rating_type) for [today](duration_date)?
+    - What is the [Average Tatvam rating](rating_type) for [yesterday](duration_date)?
+    - What is the [Avg Tatvam rating](rating_type) [day before yesterday](duration_date)?
+    - What is the [Avg Tatvam rating](rating_type) [2023-03-18](duration_date)?
+    - What is the [Avg Tatvam rating](rating_type) [Jan 1st 2023](duration_date)?
+    - What is the [Avg Tatvam rating](rating_type) [2nd Jan 2023](duration_date)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [last 6 days](duration_date)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [last 4 days](duration_date)?
+    - What was the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) [4 days ago](duration_date)?
+    - What was the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) [4 days back](duration_date)? 
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [2023-05-20](duration_date)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [05-20-2023](duration_date)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [20-05-2023](duration_date)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [20 Jul 2023](duration_date)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [May 20, 2023](duration_date)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [2022-12-15](duration_date)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [12-15-2022](duration_date)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [15-12-2022](duration_date)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [15 Dec 2022](duration_date)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [Mar 15, 2023](duration_date)?
+    - What is the [Tatvam Rating](rating_type) from [2023-12-12](duration_date) to [2023-12-16](duration_date)?
+    - What is the [Tatvam Rating](rating_type) between [2024-04-05] and [2024-04-09]?
+    - Can you share the [Tatvam Rating](rating_type) for the period from [2023-08-20] to [2023-08-24]?
+    - Provide the [Tatvam Rating](rating_type) spanning [2024-01-15] to [2024-01-19].
+    - What is the [Tatvam Rating](rating_type) for the timeframe [2023-06-28] to [2023-07-02]?
+    - Share the [Tatvam Rating](rating_type) between [2024-10-10] and [2024-10-14].
+
+- intent: tatvam_rating_special_day
+  examples: |
+    - What was the Tatvam rating for [Thanksgiving 2023](duration_date)?
+    - What was the Tatvam rating for [Thanksgiving](duration_date)?
+    - What was the Tatvam rating for [Christmas 2023](duration_date)?
+    - What was the Tatvam rating for [Christmas](duration_date)?
+    - What is the Tatvam rating for [July 4th 2024](duration_date)?
+    - What is the Tatvam rating for [Labor Day 2024](duration_date)?
+    - What is the Tatvam rating for [Memorial Day](duration_date)?
+    - What is the Tatvam rating for [Easter](duration_date)?
+    - How was the Tatvam rating for [Valentine's Day](duration_date)?
+    - What was the Tatvam rating for [New Year's Eve 2023](duration_date)?
+    - What was the Tatvam rating for [New Year's Day 2024](duration_date)?
+    - What is the Tatvam rating for [Halloween](duration_date)?
+    - What is the Tatvam rating for [Independence Day 2024](duration_date)?
+    - What was the Tatvam rating for [Labor Day](duration_date)?
+    - How did the Tatvam rating look on [Black Friday 2023](duration_date)?
+    - What is the Tatvam rating for [Cyber Monday](duration_date)?
+    - What was the Tatvam rating for [Mother's Day 2023](duration_date)?
+    - How was the Tatvam rating on [Father's Day](duration_date)?
+    - What was the Tatvam rating on [Earth Day](duration_date)?
+    - How was the Tatvam rating during [Presidents' Day](duration_date)?
+    - What is the Tatvam rating for [Columbus Day](duration_date)?
+    - What was the Tatvam rating on [Veterans Day](duration_date)?
+    - How was the Tatvam rating for [Martin Luther King Jr. Day](duration_date)?
+    - What is the Tatvam rating for [Labor Day](duration_date)?
+    - How did the Tatvam rating look on [St. Patrick's Day](duration_date)?
+    - What was the Tatvam rating for [April Fools' Day 2023](duration_date)?
+    
+- intent: tatvam_rating_by_week
+  examples: |
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [current week](duration_week)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [a week earlier](duration_week)?    
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [last 3 weeks](duration_week)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [last 1 week](duration_week)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [1 week ago](duration_week)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [2 weeks ago](duration_week)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [2 weeks back](duration_week)?
+    - Tatvam rating for [2 weeks back](duration_week)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the week of 2023-05-15 to 2023-05-21(duration_week)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the week of 05-15-2023 to 05-21-2023(duration_week)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the week of 15-05-2023 to 21-05-2023(duration_week)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the week of 15 May 2023 to 21 May 2023(duration_week)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the week of May 15, 2023 to May 21, 2023(duration_week)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the week of 2022-12-01 to 2022-12-07(duration_week)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the week of 12-01-2022 to 12-07-2022(duration_week)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the week of 01-12-2022 to 07-12-2022(duration_week)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the week of 01 Dec 2022 to 07 Dec 2022(duration_week)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the week of Dec 01, 2022 to Dec 07, 2022(duration_week)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [last week](duration_week)?
+
+- intent: tatvam_rating_by_month
+  examples: |
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [current month](duration_month)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [last month](duration_month)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) a [month back](duration_month)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) a [month earlier](duration_month)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [last 2 months](duration_month)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [last 6 months](duration_month)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) [6 months back](duration_month)?
+    -What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the month of May(duration_month)?
+    -What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the month of May(duration_month)?
+    -What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the month of Jun(duration_month)?
+    -What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the month of Mar(duration_month)?
+    -What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the month of March(duration_month)?
+    -What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the month of June(duration_month)?
+    -What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the month of December(duration_month)?
+    -What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the month of December(duration_month) 2020[year]?
+    -What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the month of Dec(duration_month) 2022[year]?
+    -What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for the month of Sep(duration_month) 2023[year]?
+    -Have there been any noticeable trends in our brand’s user ratings over the [past month](duration_month)?
+  
+- intent: tatvam_rating_by_year
+  examples: |  
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [current year](duration_year)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [this year](duration_year)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [last year](duration_year)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [a year back](duration_year)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) for [a year earlier](duration_year)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) [1 year ago](duration_year)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) [2 years ago](duration_year)?
+    - What is the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) [3 years back](duration_year)?   
+    - What is the Tatvam rating for [2023](duration_year)?
+    - What is the Tatvam rating for [2022](duration_year)?
+    - What is the Tatvam rating for [2021](duration_year)?
+    - For year [2024](duration_year), what is the Tatvam rating ?
+    - What is the Tatvam rating for the year [2025](duration_year)?
+    - What is the Tatvam rating for the year [2020](duration_year)?
+    - What is the Tatvam rating for the year [2026](duration_year)?
+    - What is the Tatvam rating for the year [2019](duration_year)?
+    - What is the Tatvam rating for the year [2027](duration_year)?
+    - What is the Tatvam rating for the year [2028](duration_year)?
+    - How is our brand currently perceived online?
+
+- intent: tatvam_rating_compare_by_months
+  examples: |
+    - How does the [Tatvam rating](rating_type) [this month](duration_month) compare to the [previous month](duration_month) for Dollywood Theme Park?
+    - Is there a change in [Tatvam rating](rating_type) from [last month](duration_month) to [this month](duration_month)?
+    - What is the difference in [Tatvam rating](rating_type) between [this month](duration_month) and [last month](duration_month)?
+    - Has there been any variation in [Tatvam rating](rating_type) between [this month](duration_month) and [the preceding one](duration_month)?
+    - How does the [Tatvam rating](rating_type) for [this month](duration_month) differ from the [Tatvam rating](rating_type) in the [last month](duration_month)?
+    - Is there any fluctuation in [Tatvam rating](rating_type) between [this month](duration_month) and [the month prior](duration_month)?
+    - What is the [Tatvam rating](rating_type) trend from [last month](duration_month) to [this month](duration_month)?
+    - Are there any noticeable shifts in [Tatvam rating](rating_type) when comparing [this month](duration_month) to the [previous month](duration_month)?
+    - How has the [Tatvam rating](rating_type) changed from [last month] to the [current month](duration_month)?
+    - Can you provide insights into the [Tatvam rating](rating_type) dynamics between the [current month](duration_month) and the [last month](duration_month)?
+    - How does the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) in [May](duration_month) compare to the rating in April(duration_month) for Dollywood Theme Park?
+    - How does the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) this May(duration_month) compare to the rating in Apr(duration_month) for Dollywood Theme Park?
+    - How does the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) in December(duration_month) compare to the rating in November(duration_month) for Dollywood Theme Park?
+    - How does the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) this Dec(duration_month) compare to the rating in Nov(duration_month) for Dollywood Theme Park?
+    - How does the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) in Aug(duration_month) compare to the rating in July(duration_month) for Dollywood Theme Park?
+    - How does the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) this August(duration_month) compare to the rating in Jul(duration_month) for Dollywood Theme Park?
+    - How does the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) in October(duration_month) compare to the rating in September(duration_month) for Dollywood Theme Park?
+    - How does the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) this Oct(duration_month) compare to the rating in Sep(duration_month) for Dollywood Theme Park?
+    - How does the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) in February(duration_month) [2023][year] compare to the rating in January(duration_month) [2023][year] for Dollywood Theme Park?
+    - How does the [Tatvam rating](rating_type) / [Average Tatvam rating](rating_type) / [Avg Tatvam rating](rating_type) this Feb(duration_month) compare to the rating in Jan(duration_month) for [2023][year] for Dollywood Theme Park?
+
+- intent: tatvam_rating_compare_by_years
+  examples: |
+    - How does the [Tatvam rating](rating_type) in [2022](duration_year) compare to that of [2021](duration_year), and are there specific areas that have experienced notable changes?
+    - Could you break down the differences in [Tatvam rating](rating_type) trends between the [ongoing year](duration_year) and [the preceding one](duration_year), pinpointing any discernible patterns or divergences?
+    - In what ways has the [Tatvam rating](rating_type) evolved from the prior year to the current one, specifically in the years [2021](duration_year) to [2022](duration_year), and are there specific aspects indicating noteworthy improvements or declines?
+    - Can you conduct a thorough analysis of the shifts in [Tatvam rating](rating_type) between the years [2022](duration_year) and [2021](duration_year), emphasizing any substantial developments or alterations?
+    - How do the [Tatvam rating](rating_type) metrics for the [current year](duration_year) differ from those of the [previous year](duration_year), and are there any particular elements that stand out in the comparison?
+    - What insights can you provide regarding [Tatvam rating](rating_type) performance over the years [2022](duration_year) and [2021](duration_year), and are there identifiable trends or anomalies in the data?
+    - Concerning [Tatvam rating](rating_type), what variations or enhancements have been noted from the year [2021](duration_year) to the current year [2022](duration_year), and are there any specific domains requiring attention or commendation?
+    - Can you outline the nuances and changes in [Tatvam rating](rating_type) between the years [2022](duration_year) and [2021](duration_year), offering insights into the overall trajectory of performance?
+    - Are there any particular challenges or successes attributed to the [Tatvam rating](rating_type) in the year [2022](duration_year) as opposed to the previous year [2021](duration_year), and how do these contribute to the overall assessment?
+    - What is the [tatvam rating](rating_type) [this year](duration_year) compared to [a year earlier](duration_year)?
+
+- intent: tatvam_rating_compare_by_quarters
+  examples: |
+    - What is the difference in [Tatvam rating](rating_type) between [second quater](duration_quarter) and [third qater](duration_quarter) [2023](duration_year)?
+    - Has there a change in [Tatvam rating](rating_type) from [previous quarter] to [current quarter](duration_quarter)?
+    - Has there been any variation in [Tatvam rating](rating_type) between [Q2](duration_quarter) and the [preceding one](duration_quarter) for [2023](duration_year)?
+    - What is the difference in [Tatvam rating](rating_type) between [Q2](duration_quarter) and [Q3](duration_quarter) [2023](duration_year)?
+    - How does the [Tatvam rating](rating_type) [this quarter](duration_quarter) compraed to [previous quarter](duration_quarter)?
+    - What is the difference in [Tatvam rating](rating_type) between [second quarter](duration_quarter) and [third quarter](duration_quarter) [2023](duration_year)?
+    - What is the difference in Tatvam rating between [Q2](duration_quarter)  and [Q3](duration_quarter)?
+    - How does the Tatvam rating differ between [Q3](duration_quarter)  and [Q4](duration_quarter)  of [2024](duration_year)?
+    - What is the variation in Tatvam rating between [second quarter](duration_quarter)  and [third quarter](duration_quarter) of [2022](duration_year)?
+    - Provide the difference in Tatvam rating between [Q2](duration_quarter) and [Q3](duration_quarter) [2021](duration_year).
+    - How has the Tatvam rating changed from [Q2](duration_quarter) to [Q3](duration_quarter) [2020](duration_year)?
+    
+- intent: review_criteria_month_year
+  examples: |
+    - Does the matter of the [Price](review_criteria) persist for Dollywood Theme Park in [September](duration_month) [2023](duration_year)?
+    - Is the concern regarding the [price](review_criteria) ongoing for Dollywood Theme Park in [October](duration_month) [2023](duration_year)?
+    - Has the issue with the [price](review_criteria) been resolved for Dollywood Theme Park by [September](duration_month) [2023](duration_year)? 
+    - In [September](duration_month) [2023](duration_year), is the [price](review_criteria) still causing concern for Dollywood Theme Park?
+    - Does Dollywood Theme Park still face challenges related to the [price](review_criteria)  in [September](duration_month) [2023](duration_year)?
+    - Is the issue of the [price](review_criteria) still relevant for Dollywood Theme Park in [September](duration_month) [2023](duration_year)?
+    - Are there any current worries about the [price](review_criteria) for Dollywood Theme Park in [September](duration_month) [2023](duration_year)? 
+    - Has the status of the [price](review_criteria) as a concern changed for Dollywood Theme Park by [September](duration_month) [2023](duration_year)?
+    - In [September](duration_month) [2023](duration_year), is the [price](review_criteria) still considered problematic for Dollywood Theme Park?
+    - Does the topic of the [price](review_criteria) continue to be significant for Dollywood Theme Park in [September](duration_month) [2023](duration_year)?
+    - Is [price](review_criteria) Still an issue [this year](duration_year) for our attraction?
+    - What is Dollywood Tatvam Rating for [this month](duration_month) on [Price](review_criteria).
+
+- intent: review_criteria_quarter
+  examples: |
+    - How are we doing on [Cleanliness](review_criteria) [this quarter](duration_quarter) when compared to [Last Quarter](duration_quarter) in 2023?
+    - How is our performance on [Cleanliness](review_criteria) compare [this quarter](duration_quarter) to [previous Quarter](duration_quarter) in 2023?
+    - In terms of [Cleanliness](review_criteria), how are we faring [this quarter](duration_quarter) compared to [Last Quarter](duration_quarter) in 2023?
+   
+
+- intent: getting_top_best_and_worst_topics
+  examples: |
+    - Can you list the top 3(count) most and least favorable subjects for [2023](duration_year)?
+    - What are the top 3(count) Positive and Negative themes for the year [2023](duration_year)?
+    - Identify the top 3 best and worst areas of focus for [2023](duration_year).
+    - Can you highlight the top 3 advantageous and disadvantageous matters for [2023](duration_year)?
+    - What are the top 3 positive and negative discussions or points for the year [2023](duration_year)?
+    - List the top 3 subjects with the highest and lowest ratings in [2023](duration_year).
+    - Provide the top 3 favorable and unfavorable topics for [2023](duration_year).
+    - I'd like to know the most and least popular subjects in [2023](duration_year).
+    - What are the top 3 areas of strength and weakness in terms of subject matter for [2023](duration_year)?
+    - Show me the top 3 subjects that received the most positive and negative feedback in [2023](duration_year).
+    - Can you summarize the top 3 subjects that were most praised and criticized in [2023](duration_year)?
+    - Give me insights into the top 3 subjects that were highly appreciated and disliked in [2023](duration_year).
+    - List top 3 pros and cons of [2023](duration_year).
+    - What are the key strengths and weaknesses of our brand reputation?
+
+- intent: getting_only_worst_topics
+  examples: |
+    - What are the top 3 areas for Improvement / 3 areas we are doing badly?
+    - What are the foremost three areas in need of improvement or where we're falling short?
+    - Could you outline the top three areas requiring improvement or where our performance is lacking?
+    - What are the key three areas for enhancement or where we're seeing deficiencies?
+    - Can you identify the primary three areas where we need to improve or where our performance is subpar?
+    - What are the top three areas in which we could make enhancements or where we're not meeting expectations?
+    - Could you point out three areas where we need to improve or where our performance is unsatisfactory?
+    - What are the critical three areas for improvement or where we're experiencing shortcomings?
+    - Can you highlight the main three areas where we need to enhance our performance or where we're struggling?
+    - What are the principal three areas for improvement or where we're encountering difficulties?
+
+- intent: fallback
+  examples: |
+    - I'm sorry, I didn't understand that.
+    - Could you please rephrase your question?
+    - Apologies, I'm not sure how to respond to that.
+    - It seems like I'm not equipped to answer that question.
+
+- intent: compare_our_brand_with_competitors
+  examples: |
+    - How does our brand's reputation stack up against competitors within our industry?
+    - In comparison to other players in our sector, where does our brand reputation stand?
+    - How do customers perceive our brand in relation to our industry rivals?
+    - What is the comparative standing of our brand reputation against competitors in our field?
+    - Where do we rank in terms of brand reputation when compared to others in our industry?
+    - How does our brand fare in terms of reputation compared to competitors within our market?
+    - In what light do customers view our brand relative to other companies in our industry?
+    - How competitive is our brand's reputation when juxtaposed with others in our sector?
+    - How does our brand reputation measure up against competitors operating in the same industry?
+    - What is the comparative assessment of our brand's reputation versus others in our industry landscape?
+    - How does our brand reputation compare to competitors in our industry?
+
+- intent: compare_our_brand_with_competitors_with_criteria
+  examples: |
+    - How do our [Price](review_criteria) stack up against those of our competitors?
+    - Are our [Price](review_criteria) competitive with those of our competitors?
+    - How do our [Price](review_criteria) strategies compare to those of our competitors?
+    - How are our [Price](review_criteria) positioned relative to our competitors?
+    - How do our [Price](review_criteria) structures fare in comparison to our competitors?
+    - Are our [Price](review_criteria) in line with or better than our competitors'?
+    - How do our [Price](review_criteria) models measure up against those of our competitors?
+    - Are our [Price](review_criteria) on par with our competitors?
+    - How do our [Price](review_criteria) rank among those of our competitors?
+    - How competitive are our [Price](review_criteria) compared to those of our competitors?
+    - How is [Carowind](competitor) on [Price](review_criteria) when compared to our brand on [Tatvam Rating](rating_type)
+
+- intent: overall_sentiment_of_our_brand
+  examples: |
+    - What is the general sentiment expressed in user reviews and feedback about our brand?
+    - How do users overall feel about our brand based on their reviews and feedback?
+    - What is the prevailing sentiment among users regarding our brand in their reviews and feedback?
+    - How are users generally expressing their opinions about our brand in their reviews and feedback?
+    - What is the overarching sentiment conveyed in user reviews and feedback about our brand?
+    - What do user reviews and feedback collectively suggest about perceptions of our brand?
+    - How are users overall reacting to our brand based on the reviews and feedback provided?
+    - What is the overall attitude reflected in user reviews and feedback concerning our brand?
+    - How do users overall perceive our brand based on the feedback and reviews they've provided?
+    - What is the consensus among users regarding their overall experiences with our brand, as indicated in their reviews and feedback?
+
+- intent: areas_of_competitor_outperformance
+  examples: |
+    - Can you identify aspects where our competitors are surpassing us?
+    - In what areas are our competitors outperforming us?
+    - Could you pinpoint specific strengths of our competitors compared to us?
+    - Where do our competitors excel in comparison to our performance?
+    - Are there particular domains where our competitors are exceeding our capabilities?
+    - Can you highlight any segments where our competitors are performing better than us?
+    - Could you outline instances where our competitors are achieving greater success than us?
+    - Can you provide insights into areas where we're lagging behind our competitors?
+    - Are there any specific features or services where our competitors are surpassing our performance?
+    - Can you point out any competitive advantages that our rivals hold over us?
+
+
+
+
+
